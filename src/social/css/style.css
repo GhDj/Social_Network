@@ -1,0 +1,101 @@
+.sidebar.sidebar-social #content{
+    margin-left: 0px !important;
+}
+
+#logo img{
+    width: 16%;
+}
+div#menu{
+    position: fixed;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 100px;
+}
+.navbar{
+    /*position: fixed;*/
+}
+#accueil{
+    margin-top: 110px;
+}
+.navbar.main {
+    text-align: center;
+}
+.navbar .input-group{
+    display: inline-block;
+}
+#sidebar-social-wrapper{
+    overflow: visible !important;
+}
+.galcolumn{
+    width: 100% !important;
+}
+.sidr.right{
+    display: inline-block;
+    position: fixed;
+    /* position: fixed; */
+    top: 0;
+    /* right: -250px; */
+    height: 100%;
+    z-index: 999999;
+
+    overflow: hidden;
+    min-height: 500px;
+    width: 40%;
+    margin-top: 110px;
+}
+#nav2{
+    top:55px;
+}
+.navbar.hidden-print.navbar-default.box.main {
+    position: fixed;
+    width: 100%;
+
+}
+#menu-right>div {
+  /*  position: fixed;*/
+}
+#footer{
+    min-height: 50px;
+    position:relative !important;
+    overflow: visible !important;
+    left: 0px !important;
+}
+.container-fluid{
+    background: none !important;
+}
+#content{
+    background: none !important;
+}
+body {
+    background: url("../img/bg.jpg");
+    background-size: cover;
+}
+.nav-tabs>li.active>a,.nav-tabs {
+    border: none !important;
+}
+.nav-tabs>li.active>a{
+    background: none;
+}
+.nav-tabs>li.active,.nav-tabs>li>a:hover{
+    background: #209488;
+    border-color: #209488;
+    color:#fff;
+    border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+    background: none !important;
+    color: #fff;
+}
+#home-form{
+    background: rgba(255,255,255,0.75);
+    margin-top: 260px;
+}
+#home-form,#home-form div{
+    padding: 0px !important;
+    border: 0;
+    border-radius: 0px !important;
+}
+#home-form form{
+    padding: 15px !important;
+}

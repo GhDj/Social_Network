@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="base@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="base">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <schema id="7" parent="1" name="faceback"/>
+    <table id="8" parent="2" name="admingroupe"/>
+    <table id="9" parent="2" name="adminpage"/>
+    <table id="10" parent="2" name="aimerpage"/>
+    <table id="11" parent="2" name="aimerpub"/>
+    <table id="12" parent="2" name="album"/>
+    <table id="13" parent="2" name="amis"/>
+    <table id="14" parent="2" name="classer"/>
+    <table id="15" parent="2" name="commentaire"/>
+    <table id="16" parent="2" name="groupe"/>
+    <table id="17" parent="2" name="media"/>
+    <table id="18" parent="2" name="naimerpaspub"/>
+    <table id="19" parent="2" name="page"/>
+    <table id="20" parent="2" name="publication"/>
+    <table id="21" parent="2" name="rejoindre"/>
+    <table id="22" parent="2" name="user"/>
+    <column id="23" parent="8" name="ID_GROUPE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="8" name="ID_USER">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="25" parent="8" name="ADMINGROUPE2_FK">
+      <ColNames>ID_USER</ColNames>
+    </index>
+    <index id="26" parent="8" name="ADMINGROUPE_FK">
+      <ColNames>ID_GROUPE</ColNames>
+    </index>
+    <key id="27" parent="8" name="PRIMARY">
+      <ColNames>ID_GROUPE
+ID_USER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="28" parent="8" name="admingroupe_ibfk_1">
+      <ColNames>ID_GROUPE</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>groupe</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_GROUPE</RefColNames>
+    </foreign-key>
+    <foreign-key id="29" parent="8" name="admingroupe_ibfk_2">
+      <ColNames>ID_USER</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_USER</RefColNames>
+    </foreign-key>
+    <column id="30" parent="9" name="ID_PAGE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="9" name="ID_USER">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="32" parent="9" name="ID_USER">
+      <ColNames>ID_USER</ColNames>
+    </index>
+    <key id="33" parent="9" name="PRIMARY">
+      <ColNames>ID_PAGE
+ID_USER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="34" parent="9" name="adminpage_ibfk_2">
+      <ColNames>ID_PAGE</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>page</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_PAGE</RefColNames>
+    </foreign-key>
+    <foreign-key id="35" parent="9" name="adminpage_ibfk_1">
+      <ColNames>ID_USER</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_USER</RefColNames>
+    </foreign-key>
+    <column id="36" parent="10" name="ID_PAGE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="10" name="ID_USER">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="38" parent="10" name="ID_USER">
+      <ColNames>ID_USER</ColNames>
+    </index>
+    <key id="39" parent="10" name="PRIMARY">
+      <ColNames>ID_PAGE
+ID_USER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="40" parent="10" name="aimerpage_ibfk_1">
+      <ColNames>ID_PAGE</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>page</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_PAGE</RefColNames>
+    </foreign-key>
+    <foreign-key id="41" parent="10" name="aimerpage_ibfk_2">
+      <ColNames>ID_USER</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_USER</RefColNames>
+    </foreign-key>
+    <column id="42" parent="11" name="ID_PUBLICATION">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="11" name="ID_USER">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="44" parent="11" name="ID_USER">
+      <ColNames>ID_USER</ColNames>
+    </index>
+    <key id="45" parent="11" name="PRIMARY">
+      <ColNames>ID_PUBLICATION
+ID_USER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="46" parent="11" name="aimerpub_ibfk_1">
+      <ColNames>ID_PUBLICATION</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>publication</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_PUBLICATION</RefColNames>
+    </foreign-key>
+    <foreign-key id="47" parent="11" name="aimerpub_ibfk_2">
+      <ColNames>ID_USER</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_USER</RefColNames>
+    </foreign-key>
+    <column id="48" parent="12" name="ID_ALBUM">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="12" name="NOM_ALBUM">
+      <Position>2</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="50" parent="12" name="DATECREATION_ALBUM">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <key id="51" parent="12" name="PRIMARY">
+      <ColNames>ID_ALBUM</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="13" name="ID_USER">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="13" name="USE_ID_USER">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="13" name="DATE_AMITIE">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="55" parent="13" name="USE_ID_USER">
+      <ColNames>USE_ID_USER</ColNames>
+    </index>
+    <key id="56" parent="13" name="PRIMARY">
+      <ColNames>ID_USER
+USE_ID_USER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="57" parent="13" name="amis_ibfk_1">
+      <ColNames>ID_USER</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_USER</RefColNames>
+    </foreign-key>
+    <foreign-key id="58" parent="13" name="amis_ibfk_2">
+      <ColNames>USE_ID_USER</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_USER</RefColNames>
+    </foreign-key>
+    <column id="59" parent="14" name="ID_MEDIA">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="14" name="ID_ALBUM">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="61" parent="14" name="ID_ALBUM">
+      <ColNames>ID_ALBUM</ColNames>
+    </index>
+    <key id="62" parent="14" name="PRIMARY">
+      <ColNames>ID_MEDIA
+ID_ALBUM</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="63" parent="14" name="classer_ibfk_1">
+      <ColNames>ID_MEDIA</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>media</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_MEDIA</RefColNames>
+    </foreign-key>
+    <foreign-key id="64" parent="14" name="classer_ibfk_2">
+      <ColNames>ID_ALBUM</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>album</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_ALBUM</RefColNames>
+    </foreign-key>
+    <column id="65" parent="15" name="ID_COMMENTAIRE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="15" name="ID_USER">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="15" name="ID_PUBLICATION">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="15" name="COM_ID_COMMENTAIRE">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="69" parent="15" name="CONTENUTEXTUEL">
+      <Position>5</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="70" parent="15" name="DATERREP_COMMENT">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="71" parent="15" name="DATE_COMMENT">
+      <Position>7</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="72" parent="15" name="DATECOMMENT_PUB">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <key id="73" parent="15" name="PRIMARY">
+      <ColNames>ID_COMMENTAIRE</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="74" parent="16" name="ID_GROUPE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="16" name="NOM_GROUPE">
+      <Position>2</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <key id="76" parent="16" name="PRIMARY">
+      <ColNames>ID_GROUPE</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="77" parent="17" name="ID_MEDIA">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="17" name="ID_PUBLICATION">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="17" name="ID_COMMENTAIRE">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="17" name="TYPE_MEDIA">
+      <Position>4</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <key id="81" parent="17" name="PRIMARY">
+      <ColNames>ID_MEDIA</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="82" parent="18" name="ID_PUBLICATION">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="18" name="ID_USER">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="84" parent="18" name="ID_USER">
+      <ColNames>ID_USER</ColNames>
+    </index>
+    <key id="85" parent="18" name="PRIMARY">
+      <ColNames>ID_PUBLICATION
+ID_USER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="86" parent="18" name="naimerpaspub_ibfk_1">
+      <ColNames>ID_PUBLICATION</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>publication</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_PUBLICATION</RefColNames>
+    </foreign-key>
+    <foreign-key id="87" parent="18" name="naimerpaspub_ibfk_2">
+      <ColNames>ID_USER</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_USER</RefColNames>
+    </foreign-key>
+    <column id="88" parent="19" name="ID_PAGE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="19" name="NOM_PAGE">
+      <Position>2</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="90" parent="19" name="LOGO_PAGE">
+      <Position>3</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="91" parent="19" name="COUVERTURE_PAGE">
+      <Position>4</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="92" parent="19" name="DOMAINE_PAGE">
+      <Position>5</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="93" parent="19" name="ACCES">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="94" parent="19" name="PRIMARY">
+      <ColNames>ID_PAGE</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="95" parent="20" name="ID_PUBLICATION">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="20" name="ID_USER">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="97" parent="20" name="ID_PAGE">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="20" name="ID_GROUPE">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="20" name="TEXT_PUBLICATION">
+      <Position>5</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="100" parent="20" name="DATE_PUB_GROUPE">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="101" parent="20" name="DATEPUBLICATION_PAGE">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="102" parent="20" name="DATEPARTAGE_PUB">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <key id="103" parent="20" name="PRIMARY">
+      <ColNames>ID_PUBLICATION</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="104" parent="21" name="ID_GROUPE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="21" name="ID_USER">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="106" parent="21" name="ID_USER">
+      <ColNames>ID_USER</ColNames>
+    </index>
+    <key id="107" parent="21" name="PRIMARY">
+      <ColNames>ID_GROUPE
+ID_USER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="108" parent="21" name="rejoindre_ibfk_1">
+      <ColNames>ID_GROUPE</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>groupe</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_GROUPE</RefColNames>
+    </foreign-key>
+    <foreign-key id="109" parent="21" name="rejoindre_ibfk_2">
+      <ColNames>ID_USER</ColNames>
+      <RefSchemaName>base</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>ID_USER</RefColNames>
+    </foreign-key>
+    <column id="110" parent="22" name="ID_USER">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="22" name="NOM_USER">
+      <Position>2</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="112" parent="22" name="PRENOM_USER">
+      <Position>3</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="113" parent="22" name="MAIL_USER">
+      <Position>4</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="114" parent="22" name="MOTPASSE_USER">
+      <Position>5</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="115" parent="22" name="GENRE_USER">
+      <Position>6</Position>
+      <DataType>char(255)|0</DataType>
+    </column>
+    <column id="116" parent="22" name="DATENAISSANCE_USER">
+      <Position>7</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="117" parent="22" name="ETAT_COMPTE">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="118" parent="22" name="PRIMARY">
+      <ColNames>ID_USER</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

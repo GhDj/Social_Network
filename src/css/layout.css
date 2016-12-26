@@ -1,0 +1,40 @@
+#post-form{
+    border: 0px !important;
+    width: 100% ;
+    min-height: 100px;
+    color: #25ad9f;
+    font-size: 2em;
+    padding: 3%;
+    font-weight: bold;
+
+}
+input[type="text"]:focus,input[type="text"]:active{
+    background: #fff !important;
+}
+#btn-ajoutPost{
+    background: #fff;
+    padding: 2%;
+}
+#btn-add{margin-top: 5px;}
+.galcolumn{
+    width: 98% !important;
+}
+
+.gridalicious-row {
+    margin: auto !important;
+}
+div#chat-notification {
+    display: none !important;
+}
+#search-navbar{
+    margin: auto;
+}
+
+.navbar.main .dropdown.notif .dropdown-menu {
+    left : -90px;
+}
+
+.navbar {
+        position: fixed;
+    width: 82%;
+}
